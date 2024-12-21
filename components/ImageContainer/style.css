@@ -1,0 +1,60 @@
+.imageContainer {
+  display: block;
+  width: 40vw;
+}
+
+img {
+  display: block;
+  border-radius: 10px; /* Same border radius as the container */
+  padding: 10px;
+  background-color: var(--light-color);
+}
+
+.image1 {
+  rotate: -4.08deg;
+  position: absolute;
+  top: 15vh;
+  right: 11vw;
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+.image2 {
+  rotate: 9.27deg;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-10%); /* Start off-screen to the left */
+    opacity: 1; /* Optional: Fade-in effect */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(10%); /* Start off-screen to the left */
+    opacity: 1; /* Optional: Fade-in effect */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1;
+  }
+}
+
+.italicText {
+  font-size: 22px;
+  font-family: "Nunito";
+  font-weight: 600;
+  font-style: italic;
+  color: var(--disabled-text-color);
+  position: absolute;
+  bottom: 5vh;
+  right: 10vw;
+}

@@ -1,0 +1,212 @@
+.container {
+  display: flex;
+  height: 95vh;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  margin: 0 5vw;
+  font-family: "Nunito";
+}
+
+.logo {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.logo img {
+  align-self: self-start;
+  background-color: var(--transparent);
+  padding: 0 !important;
+  border-radius: 0;
+}
+
+.content {
+  display: block;
+}
+
+.seperator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 52px 0;
+  color: var(--disabled-text-color);
+}
+
+.seperator div {
+  width: 40%;
+  height: 1px;
+  background-color: var(--seperator-color);
+}
+
+.buttonList {
+  width: 476px;
+  display: grid;
+}
+
+.bottomButtons {
+  display: grid;
+  gap: 16px;
+}
+
+.textContainer {
+  margin: 60px 0;
+}
+
+.textContainer h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 !important;
+  color: var(--secendory-text-color);
+}
+
+.textContainer h1 {
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 64px;
+  margin: 0 !important;
+}
+
+.textContainer span {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.textContainer img {
+  background-color: var(--transparent);
+}
+
+.countryFlag {
+  font-size: 32px;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.countryCode {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.vseperator {
+  background-color: var(--background-color);
+  width: 2px;
+  height: 25px;
+}
+
+.country {
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 56px;
+  width: 135px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  margin-right: 12px;
+}
+
+.input {
+  width: 329px;
+  height: 56px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  padding-left: 24px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.otp {
+  background-color: var(--light-color);
+  border-radius: 12px;
+  width: 476px;
+  height: 56px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.otpInput {
+  border: none;
+  padding-left: 24px;
+  font-size: 18px;
+  width: 452px;
+  height: 56px;
+  background-color: var(--transparent);
+  border-radius: 12px;
+  font-weight: 500;
+  border: none;
+}
+
+.mobileInput {
+  width: 476px;
+  height: 128px;
+}
+
+.continueBtn {
+  width: 476px;
+  height: 56px;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  background-color: var(--active-btn-color);
+  color: var(--light-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: filter 0.5s ease;
+}
+
+.continueBtn:disabled {
+  background-color: var(--disabled-btn-color);
+  color: var(--disable-btn-text);
+  cursor: not-allowed;
+}
+
+.continueBtn:hover {
+  filter: brightness(0.9);
+}
+
+.error {
+  background-color: var(--error-color-bg);
+  border: 2px solid var(--error-color-border);
+  border-radius: 12px;
+}
+
+.errorText {
+  color: var(--error-color-text);
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  right: 24px;
+  top: 16px;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.counter {
+  color: var(--disabled-text-color);
+  cursor: not-allowed;
+  margin-left: 6px;
+}
+
+.resend {
+  color: var(--timer-send-color);
+  cursor: pointer;
+  margin-left: 6px;
+}

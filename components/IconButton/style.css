@@ -1,0 +1,29 @@
+.iconButton {
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 11px;
+  background-color: var(--button-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 476px;
+  height: 56px;
+  cursor: pointer;
+  transition: filter 0.5s ease; /* Smooth transition for filter */
+}
+
+.iconButton h4 {
+  color: var(--button-text);
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Nunito";
+}
+
+.iconButton img {
+    background-color: var(--transparent);
+}
+
+.iconButton:hover {
+  filter: brightness(0.97);
+}
