@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+
 import React, { useCallback, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 import IconButton from "../IconButton";
 import ResentPopup from "../ResentPopup";
@@ -19,6 +21,7 @@ const SignupContainer = () => {
   const [loading, setLoading] = useState(true);
   
   const country = "+91";
+  const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
@@ -58,16 +61,15 @@ const SignupContainer = () => {
   };
 
   const submitOtp = () => {
-    if (otp == "1234" && window) {
-      window?.location?.reload();
+    if (otp == "1234") {
+      router.replace(router.asPath);
     } else {
       setError("Incorrect Code!");
     }
   };
 
   const reload = () => {
-    if (!window) return;
-    window?.location?.reload();
+    router.replace(router.asPath);
   };
 
   const resendCode = () => {

@@ -1,25 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import "./style.css";
 
 const ImageContainer = () => {
-  const [width, setWidth] = useState(0.8);
-
-  useEffect(() => {
-    if (!window) return;
-    const handleResize = () => {
-      setWidth(window?.innerWidth / 1920);
-    };
-    handleResize();
-    window?.addEventListener("resize", handleResize);
-
-    return () => {
-      window?.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const width = 0.8;
 
   return (
     <div className="imageContainer">
