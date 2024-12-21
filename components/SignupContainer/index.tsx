@@ -168,7 +168,7 @@ const SignupContainer = () => {
             {/* Submit Button */}
             <button
               onClick={submitPhone}
-              disabled={phone?.length != 10 || isNaN(phone)}
+              disabled={phone?.length != 10 || isNaN(Number(phone))}
               className="continueBtn"
             >
               Continue
