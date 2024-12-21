@@ -3,7 +3,6 @@
 import Image from "next/image";
 
 import React, { useCallback, useEffect, useState } from "react";
-import { useRouter } from "next/router";
 
 import IconButton from "../IconButton";
 import ResentPopup from "../ResentPopup";
@@ -19,9 +18,8 @@ const SignupContainer = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [time, setTime] = useState(0);
   const [loading, setLoading] = useState(true);
-  
+
   const country = "+91";
-  const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
@@ -62,14 +60,22 @@ const SignupContainer = () => {
 
   const submitOtp = () => {
     if (otp == "1234") {
-      router.replace(router.asPath);
+      reload();
     } else {
       setError("Incorrect Code!");
     }
   };
 
   const reload = () => {
-    router.replace(router.asPath);
+    setLoading(true);
+    setOtp("");
+    setPhone("");
+    setError("");
+    setTime(0);
+    setCurrentState(0);
+    setTimeout(() => {
+      setLoading(false);
+    }, 700);
   };
 
   const resendCode = () => {
