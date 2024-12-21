@@ -59,14 +59,14 @@ const SignupContainer = () => {
 
   const submitOtp = () => {
     if (otp == "1234") {
-      window.location.reload();
+      window?.location?.reload();
     } else {
       setError("Incorrect Code!");
     }
   };
 
   const reload = () => {
-    window.location.reload();
+    window?.location?.reload();
   };
 
   const resendCode = () => {

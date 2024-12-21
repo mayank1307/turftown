@@ -6,20 +6,20 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 
 const ImageContainer = () => {
-  const [width, setWidth] = useState(window.innerWidth / 1920);
+  const [width, setWidth] = useState(window?.innerWidth / 1920 || 0.8);
+  
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth / 1920);
+      setWidth(window?.innerWidth / 1920);
     };
+    handleResize();
+    window?.addEventListener("resize", handleResize);
 
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window?.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <div className="imageContainer">
       <div className="image2">
