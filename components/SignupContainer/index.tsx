@@ -13,11 +13,12 @@ const SignupContainer = () => {
   const [currentState, setCurrentState] = useState(0);
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
-  const [country, setCountry] = useState("+91");
   const [error, setError] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [time, setTime] = useState(0);
   const [loading, setLoading] = useState(true);
+  
+  const country = "+91";
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +28,7 @@ const SignupContainer = () => {
 
   useEffect(() => {
     if (!time) return;
-    let interval = setInterval(() => {
+    const interval = setInterval(() => {
       setTime((prev) => prev - 1);
     }, 1000);
     return () => clearInterval(interval);
