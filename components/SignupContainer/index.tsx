@@ -58,7 +58,7 @@ const SignupContainer = () => {
   };
 
   const submitOtp = () => {
-    if (otp == "1234") {
+    if (otp == "1234" && window) {
       window?.location?.reload();
     } else {
       setError("Incorrect Code!");
@@ -66,6 +66,7 @@ const SignupContainer = () => {
   };
 
   const reload = () => {
+    if (!window) return;
     window?.location?.reload();
   };
 

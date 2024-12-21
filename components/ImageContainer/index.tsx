@@ -6,9 +6,10 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 
 const ImageContainer = () => {
-  const [width, setWidth] = useState(window?.innerWidth / 1920 || 0.8);
-  
+  const [width, setWidth] = useState(0.8);
+
   useEffect(() => {
+    if (!window) return;
     const handleResize = () => {
       setWidth(window?.innerWidth / 1920);
     };
