@@ -69,8 +69,7 @@ const SignupContainer = () => {
     window.location.reload();
   };
 
-  const resendCode = (e: any) => {
-    e.preventDefault();
+  const resendCode = () => {
     setTime(70);
     setShowPopup(true);
     setTimeout(() => {
